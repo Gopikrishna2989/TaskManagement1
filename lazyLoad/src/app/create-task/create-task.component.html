@@ -1,0 +1,73 @@
+
+<div class="container-fluid">
+    <form [formGroup]="taskForm" (ngSubmit)="createTask()">
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="tname">Task Name</label>
+            <input type="text" class="form-control" id="tname" formControlName="TaskName" placeholder="Task Name" />
+        </div>
+    </div>
+
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="tstatus">Task Status</label>
+            <select class="form-select" formControlName="TaskStatus" name="" id="tstatus">
+                <option value="">To-do</option>
+                <option value="">In-progress</option>
+                <option value="">Pending</option>
+                <option value="">Blocked</option>
+                <option value="">Completed</option>
+                <option value="">Cancelled</option>
+            </select>
+        </div>
+    </div>
+   
+
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="tdesc">Task Description</label>
+            <textarea name="" class="form-control" id="tdesc" formControlName="TaskDescription" cols="40" rows="1"></textarea>
+        </div>
+    </div>
+
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="tsd">Task Start Date</label>
+            <input type="date" class="form-control" id="tsd" formControlName="TaskStartDate"name="trip-start"
+       value="2022-05-04"
+       min="2022-01-01" max="2022-12-31">
+        </div>
+    </div>
+
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="ted">Task End Date</label>
+            <input type="date" class="form-control" id="TaskEndDate" formControlName="TaskEndDate" name="trip-start"
+       value="2022-05-04"
+       min="2022-01-01" max="2022-12-31">
+        </div>
+    </div>
+
+    <div class="col-5">
+
+        <div class="input-group fm">
+            <label class="input-group-text col-3" for="ta">Assign To</label>
+            <select class="form-select" formControlName="AssignStatus" name="" id="ta">
+                <option value="">Gopi Krishna</option>
+                <option value="">Nizam</option>
+                <option value="">Manohar</option>
+                <option value="">Muqeeth</option>
+            </select>
+        </div>
+    </div>
+   
+    <button class="btn btn-primary" type="submit" >Create Task</button>
+</form>
+
+    
+</div>
